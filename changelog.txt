@@ -1,0 +1,6 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2026-05-19
+
+  Major Features:
+    - Customize the coverage area and wire reach of electric poles and substations.
