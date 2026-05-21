@@ -73,5 +73,5 @@ data:extend({
         maximum_value = 64,
         order = "db",
         setting_type = "startup"
-    },
+    }
 })

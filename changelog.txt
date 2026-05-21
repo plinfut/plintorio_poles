@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2026-05-21
+
+  Major Features:
+    - Added option to draw red and/or green wires between poles when placing them.
+
+  Bugfixes:
+    - Placed small electric poles could not be selected while in the map editor.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2026-05-21
 

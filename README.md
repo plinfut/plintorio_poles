@@ -4,10 +4,13 @@ A mod for the game Factorio that adds several customaizations to electricity pol
 
 ## Features
 
-- Settings to change the coverage area and wire reach of electric poles and substations. (The default is the same as in vanilla Factorio.)
+- Settings to change the coverage area and wire reach of electric poles and substations.
+  - The default is the same as in vanilla Factorio.
 - Easily light up your base by attaching lamps to electricity poles before placing them.
   - Crafting costs: 1 pole and 1 lamp.
-  - Recipes unlock with the same technologies as regular poles, except for the small ones. Those become available with the Lamps technology.
+  - Recipes unlock with the same technologies as their regular pole equivalent, except for the small ones. Those become available with the Lamps technology.
+- Automatically create red and/or green wires between electricity poles when placing them.
+  - This can be toggled through the shortcut bar.
 
 ## Inspiration
 
@@ -27,3 +30,5 @@ I loved how easy it was to place electric poles in vanilla Factorio by dragging 
 The next "problem" was that a wire length of medium poles doesn't match up nicely with other ranges like those of robopots and radars. I planned to work with multiples of 10 and thus needed medium poles to be placed one tile further apart. I then figured other distances for all poles could come in handy for other layouts.
 
 A good way to light up your base is to place a lamp next to every electricity pole, but that still had to be done individually until I discovered Pole Lamps. That replaces the vanilla poles and makes the lamps free though, and even reduces their electricity costs by 80%. That felt like an unnecessary cheat, so I kept the regular poles and added separate recipes for poles with lamps.
+
+Finally, even if you use radars for really long distance transmission of logistics signals, you may still need to carry them across several electric poles. I wasn't going to draw those one section at a time when everything else works automatically. Of course you may not want red and/or green wires everywhere, so I added a toggle for each.

@@ -1,3 +1,7 @@
+--[[-----------------------------------------------------------------------------------------------
+---- COVERAGE & WIRE REACH
+-------------------------------------------------------------------------------------------------]]
+
 -- Update vanilla small electric pole's range and coverage.
 local sp = data.raw["electric-pole"]["small-electric-pole"]
 sp.supply_area_distance = settings.startup["plintorio_poles_sp_radius"].value
@@ -18,8 +22,14 @@ local ss = data.raw["electric-pole"]["substation"]
 ss.supply_area_distance = settings.startup["plintorio_poles_ss_radius"].value
 ss.maximum_wire_distance = settings.startup["plintorio_poles_ss_dist"].value
 
+--[[-----------------------------------------------------------------------------------------------
+---- LAMP ATTACHMENT
+-------------------------------------------------------------------------------------------------]]
+
 -- Prepare the pole lamp prototype.
 local pl = table.deepcopy(data.raw["lamp"]["small-lamp"])
+pl.collision_box = { { -0.1, -0.1}, { 0.1, 0.1}}
+pl.collision_mask = { layers = {} }
 pl.flags = {
     "placeable-off-grid",
     "not-deconstructable",
@@ -28,6 +38,7 @@ pl.flags = {
 }
 pl.minable = nil
 pl.name = "pole-lamp"
+pl.selection_box = { { -0.2, -0.2}, { 0.2, 0.2}}
 pl.selectable_in_game = false
 
 -- Prepare the small electric pole with lamp prototype.
@@ -42,7 +53,6 @@ spli.name = "small-electric-pole-with-lamp"
 spli.next_upgrade = "medium-electric-pole-with-lamp"
 spli.order = "a[energy]-a[small-electric-pole]-a[with-lamp]"
 spli.place_result = "small-electric-pole-with-lamp"
-print(serpent.block(spli))
 -- Prepare the small electric pole with lamp recipe.
 local splr = {
     enabled = false,
@@ -70,7 +80,6 @@ mpli.icon = "__plintorio_poles__/graphics/icons/medium-electric-pole-with-lamp.p
 mpli.name = "medium-electric-pole-with-lamp"
 mpli.order = "a[energy]-b[medium-electric-pole]-a[with-lamp]"
 mpli.place_result = "medium-electric-pole-with-lamp"
-print(serpent.block(mpli))
 -- Prepare the medium electric pole with lamp recipe.
 local mplr = {
     enabled = false,
@@ -98,7 +107,6 @@ bpli.icon = "__plintorio_poles__/graphics/icons/big-electric-pole-with-lamp.png"
 bpli.name = "big-electric-pole-with-lamp"
 bpli.order = "a[energy]-c[big-electric-pole]-a[with-lamp]"
 bpli.place_result = "big-electric-pole-with-lamp"
-print(serpent.block(bpli))
 -- Prepare the big electric pole with lamp recipe.
 local bplr = {
     enabled = false,
@@ -126,7 +134,6 @@ ssli.icon = "__plintorio_poles__/graphics/icons/substation-with-lamp.png"
 ssli.name = "substation-with-lamp"
 ssli.order = "a[energy]-d[substation]-a[with-lamp]"
 ssli.place_result = "substation-with-lamp"
-print(serpent.block(ssli))
 -- Prepare the substation with lamp recipe.
 local sslr = {
     enabled = false,
@@ -145,3 +152,33 @@ table.insert(data.raw["technology"]["electric-energy-distribution-2"].effects, {
 
 -- Add all new elements.
 data:extend({ pl, splp, spli, splr, mplp, mpli, mplr, bplp, bpli, bplr, sslp, ssli, sslr })
+
+--[[-----------------------------------------------------------------------------------------------
+---- LOGISTICS WIRES
+-------------------------------------------------------------------------------------------------]]
+
+-- Add a shortcut buttons to toggle automatically adding red and green wire.
+data:extend({ 
+    {
+        action = "lua",
+        icon = "__plintorio_poles__/graphics/icons/shortcut-red-32.png",
+        icon_size = 32,
+        name = "auto-red-wire",
+        order = "d[wires]-c[auto-wire]-a[red]",
+        small_icon = "__plintorio_poles__/graphics/icons/shortcut-red-24.png",
+        small_icon_size = 24,
+        toggleable = true,
+        type = "shortcut"
+    },
+    {
+        action = "lua",
+        icon = "__plintorio_poles__/graphics/icons/shortcut-green-32.png",
+        icon_size = 32,
+        name = "auto-green-wire",
+        order = "d[wires]-c[auto-wire]-b[green]",
+        small_icon = "__plintorio_poles__/graphics/icons/shortcut-green-24.png",
+        small_icon_size = 24,
+        toggleable = true,
+        type = "shortcut"
+    },
+})
