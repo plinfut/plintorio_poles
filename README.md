@@ -31,4 +31,4 @@ The next "problem" was that a wire length of medium poles doesn't match up nicel
 
 A good way to light up your base is to place a lamp next to every electricity pole, but that still had to be done individually until I discovered Pole Lamps. That replaces the vanilla poles and makes the lamps free though, and even reduces their electricity costs by 80%. That felt like an unnecessary cheat, so I kept the regular poles and added separate recipes for poles with lamps.
 
-Finally, even if you use radars for really long distance transmission of logistics signals, you may still need to carry them across several electric poles. I wasn't going to draw those one section at a time when everything else works automatically. Of course you may not want red and/or green wires everywhere, so I added a toggle for each.
+Finally, even if you use radars for really long distance transmission of circuit network signals, you may still need to carry them across several electric poles. I wasn't going to draw those one section at a time when everything else works automatically. Of course you may not want red and/or green wires everywhere, so I added a toggle for each.
