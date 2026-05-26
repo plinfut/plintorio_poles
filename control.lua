@@ -1,8 +1,8 @@
 --[[-----------------------------------------------------------------------------------------------
         DEPENDENCIES
 -------------------------------------------------------------------------------------------------]]
-local shortcuts = require("scripts.control.shortcuts")
-local construction = require("scripts.control.construction")
+local shortcuts = require("modules.control.shortcuts")
+local construction = require("modules.control.construction")
 
 --[[-----------------------------------------------------------------------------------------------
         HELPER FUNCTIONS

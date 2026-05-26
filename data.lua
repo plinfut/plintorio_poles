@@ -1,9 +1,9 @@
 --[[-----------------------------------------------------------------------------------------------
         DEPENDENCIES
 -------------------------------------------------------------------------------------------------]]
-require("scripts.data.prototypes")
-local poles = require("scripts.data.poles")
-local shortcuts = require("scripts.data.shortcuts")
+require("modules.data.prototypes")
+local poles = require("modules.data.poles")
+local shortcuts = require("modules.data.shortcuts")
 
 --[[-----------------------------------------------------------------------------------------------
         POLE DEFINITIONS
