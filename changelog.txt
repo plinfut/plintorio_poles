@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2026-05-26
+
+  Ease of use:
+    - Made icons more distinct from vanilla poles when text covers the bottom.
+    - Added a clearer thumbnail.
+
+  Optimizations:
+    - Restructured code for easier maintenance and better preparedness for game updates.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2026-05-21
 

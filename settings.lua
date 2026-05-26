@@ -8,7 +8,7 @@ data:extend({
         default_value = 2.5,
         minimum_value = 1,
         maximum_value = 64,
-        order = "aa",
+        order = "a[small-pole]-a[cover-radius]",
         setting_type = "startup"
     },
     {
@@ -17,7 +17,7 @@ data:extend({
         default_value = 7,
         minimum_value = 2,
         maximum_value = 64,
-        order = "ab",
+        order = "a[small-pole]-b[wire-reach]",
         setting_type = "startup"
     },
     {
@@ -26,7 +26,7 @@ data:extend({
         default_value = 3.5,
         minimum_value = 1,
         maximum_value = 64,
-        order = "ba",
+        order = "b[medium-pole]-a[cover-radius]",
         setting_type = "startup"
     },
     {
@@ -35,7 +35,7 @@ data:extend({
         default_value = 9,
         minimum_value = 2,
         maximum_value = 64,
-        order = "bb",
+        order = "b[medium-pole]-a[wire-reach]",
         setting_type = "startup"
     },
     {
@@ -44,7 +44,7 @@ data:extend({
         default_value = 2,
         minimum_value = 1.5,
         maximum_value = 64,
-        order = "ca",
+        order = "c[big-pole]-a[cover-radius]",
         setting_type = "startup"
     },
     {
@@ -53,7 +53,7 @@ data:extend({
         default_value = 32,
         minimum_value = 3,
         maximum_value = 64,
-        order = "cb",
+        order = "c[big-pole]-a[wire-reach]",
         setting_type = "startup"
     },
     {
@@ -62,7 +62,7 @@ data:extend({
         default_value = 9,
         minimum_value = 1.5,
         maximum_value = 64,
-        order = "da",
+        order = "d[substation]-a[cover-radius]",
         setting_type = "startup"
     },
     {
@@ -71,7 +71,7 @@ data:extend({
         default_value = 18,
         minimum_value = 3,
         maximum_value = 64,
-        order = "db",
+        order = "d[substation]-b[wire-reach]",
         setting_type = "startup"
     }
 })
